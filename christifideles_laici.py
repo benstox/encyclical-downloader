@@ -40,7 +40,7 @@ if __name__ == '__main__':
     lines = [format_line(line) for line in lines]
     output = "\n\n".join(lines)
     with open("christifideles_laici_text.tex", "w") as f:
-        f.write("\\documentclass[12pt]{article}\n\\usepackage[a5paper,verbose]{geometry}\n")
+        f.write("\\documentclass[12pt]{article}\n\\usepackage[a4paper,verbose,margin=1.0in]{geometry}\n")
         f.write("\n\\begin{document}\n\n")
         f.write(output)
         f.write("\n\n\\end{document}\n")

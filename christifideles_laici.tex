@@ -1,14 +1,13 @@
+% xelatex
 \documentclass[12pt]{article}
 \usepackage[a4paper]{geometry}
 \usepackage{pdfpages}
     \includepdfset{pages=-}
 
-\author{N.~N}
-\title{The booklet}
-
 \begin{document}
-
-    \includepdf[pages=-,nup=1x2,landscape]{christifideles_laici_text.pdf}
+    % the 'signature' argument should be the next multiple of 4 after the number
+    % of pages in christifideles_laici_text.pdf
+    \includepdf[pages=-,nup=1x2,landscape,signature=64]{christifideles_laici_text.pdf}
 
 \end{document}
 
