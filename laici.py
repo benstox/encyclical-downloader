@@ -38,6 +38,9 @@ if __name__ == '__main__':
                 lines.append("<p>{}</p>".format(child))
 
     lines = [format_line(line) for line in lines]
-    output = "\n".join(lines)
+    output = "\n\n".join(lines)
     with open("laici.tex", "w") as f:
+        f.write("\\documentclass[12pt]{article}\n\\usepackage[a5paper,verbose]{geometry}\n")
+        f.write("\n\\begin{document}\n\n")
         f.write(output)
+        f.write("\n\n\\end{document}\n")
