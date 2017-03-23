@@ -15,6 +15,10 @@ def format_line(line):
     line = re.sub(re.compile(r"</p>", re.MULTILINE|re.DOTALL), "", line)
     line = re.sub(re.compile(r"<font.*?>", re.MULTILINE|re.DOTALL), "", line)
     line = re.sub(re.compile(r"</font>", re.MULTILINE|re.DOTALL), "", line)
+    line = re.sub(re.compile(r"<span.*?>", re.MULTILINE|re.DOTALL), "", line)
+    line = re.sub(re.compile(r"</span>", re.MULTILINE|re.DOTALL), "", line)
+    line = re.sub(re.compile(r"<a.*?>", re.MULTILINE|re.DOTALL), "", line)
+    line = re.sub(re.compile(r"</a>", re.MULTILINE|re.DOTALL), "", line)
     return(line)
 
 
