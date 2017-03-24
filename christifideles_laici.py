@@ -19,6 +19,13 @@ def format_line(line):
     line = re.sub(re.compile(r"</span>", re.MULTILINE|re.DOTALL), "", line)
     line = re.sub(re.compile(r"<a.*?>", re.MULTILINE|re.DOTALL), "", line)
     line = re.sub(re.compile(r"</a>", re.MULTILINE|re.DOTALL), "", line)
+    line = re.sub(r'"([A-Za-z]+)', "``\\1", line)
+    line = re.sub(r'([A-Za-z.!?\']+)"', "\\1''", line)
+    line = re.sub(r"'([A-Za-z]+)", "`\\1", line)
+    line = re.sub(r"([A-Za-z.!?]+)'", "\\1'", line)
+    line = re.sub(r'\)"\(', ")''(", line)
+    line = line.replace('"', "``")
+    line = line.replace("'''", "'\\thinspace''")
     return(line)
 
 
