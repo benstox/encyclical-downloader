@@ -26,6 +26,7 @@ def format_line(line):
     line = re.sub(r'\)"\(', ")''(", line)
     line = line.replace('"', "``")
     line = line.replace("'''", "'\\thinspace''")
+    line = line.replace("`s ", "'s ")
     return(line)
 
 
